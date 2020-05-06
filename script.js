@@ -80,10 +80,21 @@ var tekenKogel = function(x, y) {
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
+
 var tekenSpeler = function(x, y) {
   fill("white");
-  rect(mouseX, 450, 100, 50);
+  //rect(mouseX, 450, 100, 50);
+  image(spelerimage, mouseX, y);
+
+  
+
 };
+var spelerimage;
+function preload() {
+    spelerimage = loadImage('plaatjes/mand.jpg');
+    
+   
+}
 
 
 /**
