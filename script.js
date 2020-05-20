@@ -69,6 +69,24 @@ var tekenVijand = function(x, y) {
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
+// Single Circle - Get Canvas element by Id
+var canvas1 = document.getElementById( "canvas1" );
+
+// Set Canvas dimensions
+canvas1.width   = 200;
+canvas1.height  = 200;
+
+// Get drawing context
+var c1 = canvas1.getContext( '2d' );
+
+// Begin Path
+c1.beginPath();
+
+// Arc Operation
+c1.arc( 50, 50, 30, 0, Math.PI * 2, false );
+
+// Fill Stroke
+c1.stroke();
 var tekenKogel = function(x, y) {
 
 
