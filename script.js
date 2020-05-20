@@ -84,7 +84,9 @@ var tekenKogel = function(x, y) {
 var tekenSpeler = function(x, y) {
   fill("white");
   //rect(mouseX, 450, 100, 50);
-  image(spelerimage, mouseX, y);
+  image(spelerimage, mouseX, 400,150,90);
+  //image(img,10,10,60,50);
+  
 
   
 
