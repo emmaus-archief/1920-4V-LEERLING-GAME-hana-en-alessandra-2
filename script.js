@@ -69,15 +69,6 @@ var tekenVijand = function(x, y) {
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
-var x = 10
-    
-draw = function() {
-    
-    // draw the circle
-    ellipse(x + 75, 221, 24, 24);
-    
-    
-};
 var tekenKogel = function(x, y) {
 
 
@@ -93,7 +84,7 @@ var tekenKogel = function(x, y) {
 var tekenSpeler = function(x, y) {
   fill("white");
   //rect(mouseX, 450, 100, 50);
-  image(spelerimage, mouseX, 400,150,90);
+  image(spelerimage, mouseX, 400, 200, 195);
   //image(img,10,10,60,50);
   
 
@@ -102,7 +93,7 @@ var tekenSpeler = function(x, y) {
 };
 var spelerimage;
 function preload() {
-    spelerimage = loadImage('plaatjes/mand.jpg');
+    spelerimage = loadImage('./plaatjes/mand4.png');
     
    
 }
