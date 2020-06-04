@@ -70,6 +70,7 @@ var tekenVijand = function(x, y) {
  * @param {number} y y-coördinaat
  */
 var tekenKogel = function(x, y) {
+   
 
 
 };
@@ -84,7 +85,7 @@ var tekenKogel = function(x, y) {
 var tekenSpeler = function(x, y) {
   fill("white");
   //rect(mouseX, 450, 100, 50);
-  image(spelerimage, mouseX, 400, 200, 195);
+  image(spelerimage, mouseX, 350, 200, 195);
   //image(img,10,10,60,50);
   
 
@@ -111,9 +112,8 @@ var beweegVijand = function() {
  * Updatet globale variabelen met positie van kogel of bal
  */
 var beweegKogel = function() {
-
-};
-
+  
+}
 
 /**
  * Kijkt wat de toetsen/muis etc zijn.
