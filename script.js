@@ -85,14 +85,14 @@ var tekenKogel = function(x, y) {
 var tekenSpeler = function(x, y) {
   fill("white");
   //rect(mouseX, 450, 100, 50);
-  image(spelerimage, mouseX, 350, 200, 195);
+  image(spelerimage, x, y, 200, 195);
   //image(img,10,10,60,50);
   
 
   
 
 };
-var spelerimage;
+var spelerimage=0;
 function preload() {
     spelerimage = loadImage('./plaatjes/mand4.png');
     
@@ -120,7 +120,8 @@ var beweegKogel = function() {
  * Updatet globale variabele spelerX en spelerY
  */
 var beweegSpeler = function() {
-
+  spelerX = mouseX;
+  spelerY = 350;
 };
 
 
