@@ -28,8 +28,8 @@ var spelerY = 100; // y-positie van speler
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
 
-var vijandX = 0;   // x-positie van vijand
-var vijandY = 0;   // y-positie van vijand
+var vijandX = 200;   // x-positie van vijand
+var vijandY = 50;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
@@ -59,8 +59,8 @@ fill("green");
  * @param {number} y y-coördinaat
  */
 var tekenVijand = function(x, y) {
-    
-
+    fill("red");
+    ellipse(x, y, 20, 20);
 };
 
 
@@ -104,7 +104,11 @@ function preload() {
  * Updatet globale variabelen met positie van vijand of tegenspeler
  */
 var beweegVijand = function() {
-    
+    vijandY = vijandY + 10;
+    if (vijandY>height) {
+        vijandY=0;
+        vijandX = random (100,800);
+    }
 };
 
 
@@ -129,19 +133,10 @@ var beweegSpeler = function() {
  * Zoekt uit of de vijand is geraakt
  * @returns {boolean} true als vijand is geraakt
  */
-var checkVijandGeraakt = function() {
-
-  return false;
-};
-
-
-/**
- * Zoekt uit of de speler is geraakt
- * bijvoorbeeld door botsing met vijand
- * @returns {boolean} true als speler is geraakt
- */
-var checkSpelerGeraakt = function() {
-    
+var checkVijandGevangen = function() {
+// if (vijand in mandje) {
+// return true;
+// else
   return false;
 };
 
@@ -167,6 +162,8 @@ function setup() {
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
   background('blue');
+
+  vijandX = random(100,800);
 }
 
 
@@ -182,16 +179,11 @@ function draw() {
       beweegKogel();
       beweegSpeler();
       
-      if (checkVijandGeraakt()) {
+      if (checkVijandGevangen()) {
         // punten erbij
         // nieuwe vijand maken
       }
       
-      if (checkSpelerGeraakt()) {
-        // leven eraf of gezondheid verlagen
-        // eventueel: nieuwe speler maken
-      }
-
       tekenVeld();
       tekenVijand(vijandX, vijandY);
       tekenKogel(kogelX, kogelY);
