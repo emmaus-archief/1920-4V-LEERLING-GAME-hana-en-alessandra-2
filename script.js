@@ -41,6 +41,8 @@ var p = 100 // voor wolkjes
 
 
 
+
+
 /* ********************************************* */
 /*      functies die je gebruikt in je game      */
 /* ********************************************* */
@@ -88,6 +90,37 @@ var tekenVeld = function () {
       p = - 1000;
   }
  
+fill("darkgreen")
+rect(50,370,20,80);
+fill("purple")
+ellipse(90,370,60,40);
+ellipse(60,340,40,60);
+ellipse(30,370,60,40);
+ellipse(60,400,40,60);
+fill("pink")
+ellipse(60,370,40,40);
+
+
+fill("darkgreen")
+rect(550,370,20,80);
+fill("purple")
+ellipse(590,370,60,40);
+ellipse(560,340,40,60);
+ellipse(530,370,60,40);
+ellipse(560,400,40,60);
+fill("pink")
+ellipse(560,370,40,40);
+
+fill("darkgreen")
+rect(950,370,20,80);
+fill("purple")
+ellipse(990,370,60,40);
+ellipse(960,340,40,60);
+ellipse(930,370,60,40);
+ellipse(960,400,40,60);
+fill("pink")
+ellipse(960,370,40,40);
+
 
 };
 
