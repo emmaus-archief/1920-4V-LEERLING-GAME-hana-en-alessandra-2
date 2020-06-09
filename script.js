@@ -50,6 +50,30 @@ var tekenVeld = function () {
   rect(20, 20, width - 2 * 20, height - 2 * 20);
 fill("green");
   rect(0,450,1400,250);
+
+  noStroke()
+  fill("white")
+  rect(100,150,150,50);
+  ellipse(100,175,50,50);
+  ellipse(250,160,80,80);
+  ellipse(140,140,70,70);
+  ellipse(190,140,100,100);
+
+   noStroke()
+  fill("white")
+  rect(400,350,150,50);
+  ellipse(400,375,50,50);
+  ellipse(550,360,80,80);
+  ellipse(440,340,70,70);
+  ellipse(490,340,100,100);
+
+  noStroke()
+  fill("white")
+  rect(900,250,150,50);
+  ellipse(900,275,50,50);
+  ellipse(1050,260,80,80);
+  ellipse(940,240,70,70);
+  ellipse(990,240,100,100);
 };
 
 
