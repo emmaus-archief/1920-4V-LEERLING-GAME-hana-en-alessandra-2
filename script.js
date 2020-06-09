@@ -33,6 +33,8 @@ var vijandY = 50;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
+var w = 100 //voor wolkjes
+
 
 
 
@@ -52,31 +54,38 @@ var tekenVeld = function () {
   rect(0,450,1400,250);
 
   //wolk 1
+
   noStroke()
   fill("white")
-  rect(100,150,150,50);
-  ellipse(100,175,50,50);
-  ellipse(250,160,80,80);
-  ellipse(140,140,70,70);
-  ellipse(190,140,100,100);
+  rect(w,w+50,w+50,w-50);
+  ellipse(w,w+75,w-50,w-50);
+  ellipse(w+150,w+60,w-20,w-20);
+  ellipse(w+40,w+40,w-30,w-30);
+  ellipse(w+90,w+40,w,w);
 
   //wolk 2
   noStroke()
   fill("white")
-  rect(400,350,150,50);
-  ellipse(400,375,50,50);
-  ellipse(550,360,80,80);
-  ellipse(440,340,70,70);
-  ellipse(490,340,100,100);
+  rect(w+300,w+250,w+50,w-50);
+  ellipse(w+300,w+275,w-50,w-50);
+  ellipse(w+450,w+260,w-20,w-20);
+  ellipse(w+340,w+240,w-30,w-30);
+  ellipse(w+390,w+240,w,w);
 
   // wolk 3
   noStroke()
   fill("white")
-  rect(900,250,150,50);
-  ellipse(900,275,50,50);
-  ellipse(1050,260,80,80);
-  ellipse(940,240,70,70);
-  ellipse(990,240,100,100);
+  rect(w+800,w+150,w+50,w-50);
+  ellipse(w+800,w+175,w-50,w-50);
+  ellipse(w+950,w+160,w-20,w-20);
+  ellipse(w+840,w+140,w-30,w-30);
+  ellipse(w+890,w+140,w,w);
+  
+ 
+
+  
+
+  
 };
 
 
