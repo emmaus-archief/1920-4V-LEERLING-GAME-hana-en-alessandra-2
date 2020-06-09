@@ -48,9 +48,10 @@ var score = 0; // aantal behaalde punten
 var tekenVeld = function () {
   fill("lightblue");
   rect(20, 20, width - 2 * 20, height - 2 * 20);
-fill("green");
+  fill("green");
   rect(0,450,1400,250);
 
+  //wolk 1
   noStroke()
   fill("white")
   rect(100,150,150,50);
@@ -59,7 +60,8 @@ fill("green");
   ellipse(140,140,70,70);
   ellipse(190,140,100,100);
 
-   noStroke()
+  //wolk 2
+  noStroke()
   fill("white")
   rect(400,350,150,50);
   ellipse(400,375,50,50);
@@ -67,6 +69,7 @@ fill("green");
   ellipse(440,340,70,70);
   ellipse(490,340,100,100);
 
+  // wolk 3
   noStroke()
   fill("white")
   rect(900,250,150,50);
@@ -142,6 +145,8 @@ var beweegVijand = function() {
 var beweegKogel = function() {
   
 }
+
+
 
 /**
  * Kijkt wat de toetsen/muis etc zijn.
