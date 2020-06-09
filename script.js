@@ -35,6 +35,8 @@ var score = 0; // aantal behaalde punten
 
 var w = 100 //voor wolkjes
 
+var p = 100 // voor wolkjes
+
 
 
 
@@ -54,38 +56,39 @@ var tekenVeld = function () {
   rect(0,450,1400,250);
 
   //wolk 1
-
   noStroke()
   fill("white")
-  rect(w,w+50,w+50,w-50);
-  ellipse(w,w+75,w-50,w-50);
-  ellipse(w+150,w+60,w-20,w-20);
-  ellipse(w+40,w+40,w-30,w-30);
-  ellipse(w+90,w+40,w,w);
+  rect(p,w+50,w+50,w-50);
+  ellipse(p,w+75,w-50,w-50);
+  ellipse(p+150,w+60,w-20,w-20);
+  ellipse(p+40,w+40,w-30,w-30);
+  ellipse(p+90,w+40,w,w);
 
   //wolk 2
   noStroke()
   fill("white")
-  rect(w+300,w+250,w+50,w-50);
-  ellipse(w+300,w+275,w-50,w-50);
-  ellipse(w+450,w+260,w-20,w-20);
-  ellipse(w+340,w+240,w-30,w-30);
-  ellipse(w+390,w+240,w,w);
+  rect(p+300,w+250,w+50,w-50);
+  ellipse(p+300,w+275,w-50,w-50);
+  ellipse(p+450,w+260,w-20,w-20);
+  ellipse(p+340,w+240,w-30,w-30);
+  ellipse(p+390,w+240,w,w);
 
   // wolk 3
   noStroke()
   fill("white")
-  rect(w+800,w+150,w+50,w-50);
-  ellipse(w+800,w+175,w-50,w-50);
-  ellipse(w+950,w+160,w-20,w-20);
-  ellipse(w+840,w+140,w-30,w-30);
-  ellipse(w+890,w+140,w,w);
+  rect(p+800,w+150,w+50,w-50);
+  ellipse(p+800,w+175,w-50,w-50);
+  ellipse(p+950,w+160,w-20,w-20);
+  ellipse(p+840,w+140,w-30,w-30);
+  ellipse(p+890,w+140,w,w);
   
+  p = p + 5;
+
+  if (p > 1250) {
+      p = - 1000;
+  }
  
 
-  
-
-  
 };
 
 
