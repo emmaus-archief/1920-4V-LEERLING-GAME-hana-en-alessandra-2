@@ -33,9 +33,9 @@ var vijandY = 50;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
-var w = 100 //voor wolkjes
+var w = 100 // voor wolkjes (was uiteindelijk niet nodig)
 
-var p = 100 // voor wolkjes
+var p = 100 // voor wolkjes (zorgt voor beweging)
 
 
 
@@ -84,43 +84,47 @@ var tekenVeld = function () {
   ellipse(p+840,w+140,w-30,w-30);
   ellipse(p+890,w+140,w,w);
   
-  p = p + 5;
+
+  // beweging wolkjes
+  p = p + 3;
 
   if (p > 1250) {
       p = - 1000;
   }
  
-fill("darkgreen")
-rect(50,370,20,80);
-fill("purple")
-ellipse(90,370,60,40);
-ellipse(60,340,40,60);
-ellipse(30,370,60,40);
-ellipse(60,400,40,60);
-fill("pink")
-ellipse(60,370,40,40);
 
+// bloem 1
+fill("darkgreen");
+rect(50,370,18,80);
+fill("purple");
+ellipse(80,370,50,30);
+ellipse(60,350,30,50);
+ellipse(40,370,50,30);
+ellipse(60,390,30,50);
+fill("pink");
+ellipse(60,370,30,30);
 
-fill("darkgreen")
-rect(550,370,20,80);
-fill("purple")
-ellipse(590,370,60,40);
-ellipse(560,340,40,60);
-ellipse(530,370,60,40);
-ellipse(560,400,40,60);
-fill("pink")
-ellipse(560,370,40,40);
+// bloem 2
+fill("darkgreen");
+rect(460,550,18,70);
+fill(42, 45, 201);
+ellipse(490,540,50,30);
+ellipse(470,560,30,50);
+ellipse(450,540,50,30);
+ellipse(470,520,30,50);
+fill(255, 166, 64);
+ellipse(470,540,30,30);
 
-fill("darkgreen")
-rect(950,370,20,80);
-fill("purple")
-ellipse(990,370,60,40);
-ellipse(960,340,40,60);
-ellipse(930,370,60,40);
-ellipse(960,400,40,60);
-fill("pink")
-ellipse(960,370,40,40);
-
+// bloem 3
+fill("darkgreen");
+rect(1050,460,18,75);
+fill(245, 242, 93);
+ellipse(1080,450,50,30);
+ellipse(1060,430,30,50);
+ellipse(1040,450,50,30);
+ellipse(1060,470,30,50);
+fill(120, 72, 148);
+ellipse(1060,450,30,30);
 
 };
 
