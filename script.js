@@ -191,7 +191,10 @@ ellipse(845, 450, 50, 50);
 fill(194, 60, 67);
 ellipse(700, 445, 10, 10);
 ellipse(750, 465, 10, 10);
-ellipse(770, 450, 10, 10);
+ellipse(770, 432, 10, 10);
+ellipse(813, 450, 10, 10);
+ellipse(854   , 436, 10, 10);
+
 
 };
 
@@ -203,7 +206,9 @@ ellipse(770, 450, 10, 10);
  */
 var tekenVijand = function(x, y) {
     fill("red");
-    ellipse(x, y, 20, 20);
+    ellipse(x, y, 25, 25);
+    
+
 };
 
 
@@ -226,21 +231,18 @@ var tekenKogel = function(x, y) {
  */
 
 var tekenSpeler = function(x, y) {
-  fill("white");
+   fill("white");
   //rect(mouseX, 450, 100, 50);
   image(spelerimage, x, y, 200, 195);
   //image(img,10,10,60,50);
   
-
-  
-
 };
+
 var spelerimage=0;
 function preload() {
     spelerimage = loadImage('./plaatjes/mand4.png');
-    
-   
-}
+};
+
 
 
 /**
