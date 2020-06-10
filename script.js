@@ -43,9 +43,7 @@ var yBeginK = 320 // y-positie startknop
 
 var p = 100 // voor wolkjes (zorgt voor beweging)
 
-
-
-
+var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
 
 
 
@@ -57,7 +55,8 @@ var p = 100 // voor wolkjes (zorgt voor beweging)
 var tekenStartscherm = function () {
     background(255, 245, 105);
 
-    fill(0, 0, 0);
+
+    fill(randomColor);
     rect(xBeginK + 5, yBeginK + 150, 390, 100);
 
     fill(255, 250, 250);
@@ -70,33 +69,34 @@ var tekenStartscherm = function () {
     textFont('Courier New');
     text("Sun Catcher", xBeginK - 60, yBeginK - 180);
 
- noStroke()
- fill(217, 54, 54)
- ellipse(725,325,275,275);
- fill(247, 255, 105)
- ellipse(725,325,250,250);
- fill(181, 255, 243)
- ellipse(725,325,225,225);
- fill(218, 148, 255)
- ellipse(725,325,200,200);
- fill(255, 245, 105)
- //fill("blue")
- ellipse(725,325,175,175);
- ellipse(805,370,150,150);
- rect(600,380,200,90);
-  fill("white")
-  rect(475,w+275,w+50,w-50);
-  ellipse(475,w+300,w-50,w-50);
-  ellipse(625,w+285,w-20,w-20);
-  ellipse(515,w+265,w-30,w-30);
-  ellipse(565,w+265,w,w);
 
-   fill("white")
-  rect(825,w+175,w+50,w-50);
-  ellipse(825,w+200,w-50,w-50);
-  ellipse(975,w+185,w-20,w-20);
-  ellipse(865,w+165,w-30,w-30);
-  ellipse(915,w+165,w,w);
+    noStroke()
+    fill(217, 54, 54)
+    ellipse(725,325,275,275);
+    fill(247, 255, 105)
+    ellipse(725,325,250,250);
+    fill(181, 255, 243)
+    ellipse(725,325,225,225);
+    fill(218, 148, 255)
+    ellipse(725,325,200,200);
+    fill(255, 245, 105)
+    
+    ellipse(725,325,175,175);
+    ellipse(805,370,150,150);
+    rect(600,380,200,90);
+    fill("white")
+    rect(475,w+275,w+50,w-50);
+    ellipse(475,w+300,w-50,w-50);
+    ellipse(625,w+285,w-20,w-20);
+    ellipse(515,w+265,w-30,w-30);
+    ellipse(565,w+265,w,w);
+
+    fill("white")
+    rect(825,w+175,w+50,w-50);
+    ellipse(825,w+200,w-50,w-50);
+    ellipse(975,w+185,w-20,w-20);
+    ellipse(865,w+165,w-30,w-30);
+    ellipse(915,w+165,w,w);
 };
 
 
@@ -296,8 +296,6 @@ function setup() {
 
   vijandX = random(100,800);
 }
-
-
 
 
 /**
