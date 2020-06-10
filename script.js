@@ -55,17 +55,16 @@ var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
 var tekenStartscherm = function () {
     background(255, 245, 105);
 
-
     fill(randomColor);
     rect(xBeginK + 5, yBeginK + 150, 390, 100);
 
-    fill(255, 250, 250);
+    fill(255, 255, 255);
     textSize(28);
     textFont('Helvetica');
     text("Klik op spatie om te beginnen", xBeginK + 15, yBeginK + 210);
 
     fill(0, 0, 0);
-    textSize(80);
+    textSize(85);
     textFont('Courier New');
     text("Sun Catcher", xBeginK - 60, yBeginK - 180);
 
@@ -107,7 +106,7 @@ var tekenStartscherm = function () {
 var tekenVeld = function () {
   fill("lightblue");
   rect(20, 20, width - 2 * 20, height - 2 * 20);
-  fill("green");
+  fill(93, 201, 127);
   rect(0,450,1400,250);
 
   //wolk 1
@@ -147,37 +146,52 @@ var tekenVeld = function () {
  
 
 // bloem 1
-fill("darkgreen");
+fill(27, 166, 70);
 rect(50,370,18,80);
-fill("purple");
+fill(157, 110, 219);
 ellipse(80,370,50,30);
 ellipse(60,350,30,50);
 ellipse(40,370,50,30);
 ellipse(60,390,30,50);
-fill("pink");
+fill(187, 232, 151);
 ellipse(60,370,30,30);
 
 // bloem 2
-fill("darkgreen");
+fill(27, 166, 70);
 rect(460,550,18,70);
-fill(42, 45, 201);
+fill(62, 103, 184);
 ellipse(490,540,50,30);
 ellipse(470,560,30,50);
 ellipse(450,540,50,30);
 ellipse(470,520,30,50);
-fill(255, 166, 64);
+fill(252, 160, 78);
 ellipse(470,540,30,30);
 
 // bloem 3
-fill("darkgreen");
+fill(27, 166, 70);
 rect(1050,460,18,75);
 fill(245, 242, 93);
 ellipse(1080,450,50,30);
 ellipse(1060,430,30,50);
 ellipse(1040,450,50,30);
 ellipse(1060,470,30,50);
-fill(120, 72, 148);
+fill(240, 158, 237);
 ellipse(1060,450,30,30);
+
+// struikje
+fill(27, 166, 70);
+rect(681, 435, 170, 40);
+ellipse(689, 449, 53, 53);
+ellipse(730, 450, 50, 50);
+ellipse(760, 430, 45, 45);
+ellipse(800, 445, 60, 60);
+ellipse(845, 450, 50, 50);
+
+// stipjes in struikje
+fill(194, 60, 67);
+ellipse(700, 445, 10, 10);
+ellipse(750, 465, 10, 10);
+ellipse(770, 450, 10, 10);
 
 };
 
@@ -236,7 +250,7 @@ var beweegVijand = function() {
     vijandY = vijandY + 10;
     if (vijandY>height) {
         vijandY=0;
-        vijandX = random (100,800);
+        vijandX = random (100, 1150);
     }
 };
 
