@@ -18,9 +18,12 @@
 /* ********************************************* */
 
 const UITLEG = 0;
+const STARTSCHERM = 0;
 const SPELEN = 1;
 const GAMEOVER = 2;
-var spelStatus = SPELEN;
+//var spelStatus = SPELEN;
+var spelStatus = STARTSCHERM;
+
 
 var spelerX = 200; // x-positie van speler
 var spelerY = 100; // y-positie van speler
@@ -35,6 +38,9 @@ var score = 0; // aantal behaalde punten
 
 var w = 100 // voor wolkjes (was uiteindelijk niet nodig)
 
+var xBeginK = 460 // x-positie startknop
+var yBeginK = 320 // y-positie startknop
+
 var p = 100 // voor wolkjes (zorgt voor beweging)
 
 
@@ -46,6 +52,25 @@ var p = 100 // voor wolkjes (zorgt voor beweging)
 /* ********************************************* */
 /*      functies die je gebruikt in je game      */
 /* ********************************************* */
+
+// teken startscherm
+var tekenStartscherm = function () {
+    background(255, 245, 105);
+
+    fill(0, 0, 0);
+    rect(xBeginK + 5, yBeginK + 150, 390, 100);
+
+    fill(255, 250, 250);
+    textSize(28);
+    textFont('Helvetica');
+    text("Klik op spatie om te beginnen", xBeginK + 15, yBeginK + 210);
+
+    fill(0, 0, 0);
+    textSize(80);
+    textFont('Courier New');
+    text("Sun Catcher", xBeginK - 60, yBeginK - 180);
+};
+
 
 
 /**
@@ -245,6 +270,8 @@ function setup() {
 }
 
 
+
+
 /**
  * draw
  * de code in deze functie wordt meerdere keren per seconde
@@ -252,6 +279,13 @@ function setup() {
  */
 function draw() {
   switch (spelStatus) {
+    case STARTSCHERM:
+        tekenStartscherm();
+        if (keyIsDown(32)) {// 32=spatie
+           spelStatus = SPELEN;
+        }
+        break;
+    
     case SPELEN:
       beweegVijand();
       beweegKogel();
@@ -266,6 +300,7 @@ function draw() {
       tekenVijand(vijandX, vijandY);
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
+     
 
       if (checkGameOver()) {
         spelStatus = GAMEOVER;
