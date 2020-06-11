@@ -43,6 +43,8 @@ var yBeginK = 320 // y-positie startknop
 
 var p = 100 // voor wolkjes (zorgt voor beweging)
 
+
+
 var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
 
 
@@ -205,7 +207,7 @@ ellipse(854   , 436, 10, 10);
  * @param {number} y y-coördinaat
  */
 var tekenVijand = function(x, y) {
-    fill("red");
+    fill(255, 213, 0);
     ellipse(x, y, 25, 25);
     
 
@@ -280,10 +282,21 @@ var beweegSpeler = function() {
  * Zoekt uit of de vijand is geraakt
  * @returns {boolean} true als vijand is geraakt
  */
+
+
+
+
+
+
+ 
 var checkVijandGevangen = function() {
 // if (vijand in mandje) {
 // return true;
 // else
+//if (vijandX= spelerX){
+    //score + 1;
+
+
   return false;
 };
 
