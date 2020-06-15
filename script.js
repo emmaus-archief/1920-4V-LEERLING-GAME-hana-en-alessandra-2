@@ -260,9 +260,8 @@ var beweegVijand = function() {
         vijandX = random (100, 1150);
     }
 
-    if(score>10){
-vijandY= vijandY+5;
-
+    if (score > 10){
+    vijandY = vijandY + 3;
     }
 };
 
