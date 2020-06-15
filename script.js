@@ -290,14 +290,24 @@ var beweegSpeler = function() {
 
  
 var checkVijandGevangen = function() {
-// if (vijand in mandje) {
-// return true;
-// else
-//if (vijandX= spelerX){
-    //score + 1;
+    //x + 10, y + 100, x + 190, y+100
+    var linkerXVanglijn = spelerX + 10;
+    var rechterXVanglijn = spelerX + 190;
+    var bovenYVanglijn = spelerY + 100;
+    var onderYVanglijn = spelerY + 120;
 
 
-  return false;
+
+    if (vijandX >= linkerXVanglijn &&
+        vijandX <= rechterXVanglijn &&
+        vijandY >= bovenYVanglijn &&
+        vijandY <= onderYVanglijn) {
+
+            return true;
+        }
+    
+    
+    return false;
 };
 
 
@@ -348,7 +358,12 @@ function draw() {
       
       if (checkVijandGevangen()) {
         // punten erbij
+        score++;
+        console.log("Score is nu: " + score);
+
         // nieuwe vijand maken
+        vijandY=0;
+        vijandX = random (100, 1150);
       }
       
       tekenVeld();
