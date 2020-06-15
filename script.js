@@ -259,6 +259,11 @@ var beweegVijand = function() {
         vijandY=0;
         vijandX = random (100, 1150);
     }
+
+    if(score>10){
+vijandY= vijandY+5;
+
+    }
 };
 
 
