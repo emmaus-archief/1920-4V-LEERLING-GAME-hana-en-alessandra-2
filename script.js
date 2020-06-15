@@ -245,8 +245,11 @@ function preload() {
     spelerimage = loadImage('./plaatjes/mand4.png');
 };
 
-
-
+var tekenScore = function(x, y) {
+    textSize(30);
+    fill(53, 39, 207);
+    text(""+score, width-100, 50, 150, 50);
+};
 /**
  * Updatet globale variabelen met positie van vijand of tegenspeler
  */
@@ -370,6 +373,7 @@ function draw() {
       tekenVijand(vijandX, vijandY);
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
+      tekenScore();
      
 
       if (checkGameOver()) {
