@@ -25,6 +25,7 @@ const GAMEOVER = 2;
 var spelStatus = STARTSCHERM;
 
 
+
 var spelerX = 200; // x-positie van speler
 var spelerY = 100; // y-positie van speler
 
@@ -99,6 +100,7 @@ var tekenStartscherm = function () {
     ellipse(865,w+165,w-30,w-30);
     ellipse(915,w+165,w,w);
 };
+
 
 
 
@@ -357,6 +359,7 @@ function draw() {
            spelStatus = SPELEN;
         }
         break;
+    };
     
     case SPELEN:
       beweegVijand();
@@ -378,6 +381,7 @@ function draw() {
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
       tekenScore();
+    
      
 
       if (checkGameOver()) {
