@@ -103,7 +103,6 @@ var tekenStartscherm = function () {
 
 
 
-
 /**
  * Tekent het speelveld
  */
@@ -361,10 +360,13 @@ function draw() {
         break;
     };
     
-    case SPELEN:
+    case SPELEN;
       beweegVijand();
       beweegKogel();
       beweegSpeler();
+
+    case  GAMEOVER;
+        gameOverScherm();
       
       if (checkVijandGevangen()) {
         // punten erbij
@@ -381,6 +383,7 @@ function draw() {
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
       tekenScore();
+    
     
      
 
