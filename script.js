@@ -353,21 +353,17 @@ function setup() {
 function draw() {
   switch (spelStatus) {
     case STARTSCHERM:
-        tekenStartscherm();
-        if (keyIsDown(32)) {// 32=spatie
-           spelStatus = SPELEN;
-        }
-        break;
-    };
+      tekenStartscherm();
+      if (keyIsDown(32)) {// 32=spatie
+          spelStatus = SPELEN;
+      }
+      break;
     
-    case SPELEN;
+    case SPELEN:
       beweegVijand();
       beweegKogel();
       beweegSpeler();
 
-    case  GAMEOVER;
-        gameOverScherm();
-      
       if (checkVijandGevangen()) {
         // punten erbij
         score++;
@@ -383,13 +379,15 @@ function draw() {
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
       tekenScore();
-    
-    
-     
 
       if (checkGameOver()) {
         spelStatus = GAMEOVER;
       }
       break;
+
+    case  GAMEOVER:
+      // deze functie hebben jullie nog niet gemaakt  
+      // gameOverScherm();
+    break;
   }
 }
