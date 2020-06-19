@@ -264,6 +264,9 @@ var beweegVijand = function() {
     if (score > 10){
     vijandY = vijandY + 3;
     }
+    if(score > 15){
+        vijandY = VijandY +1;
+    }
 };
 
 
