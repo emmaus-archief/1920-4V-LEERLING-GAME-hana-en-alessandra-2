@@ -36,6 +36,7 @@ var vijandX = 200;   // x-positie van vijand
 var vijandY = 50;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
+var maxScore = 100;
 
 var w = 100 // voor wolkjes (was uiteindelijk niet nodig)
 
@@ -71,6 +72,11 @@ var tekenStartscherm = function () {
     textFont('Courier New');
     text("Sun Catcher", xBeginK - 60, yBeginK - 180);
 
+    fill(0, 0, 0);
+    textSize(50);
+    textFont('Courier New');
+    text("Can you reach the 100??", xBeginK - 60, yBeginK +300);
+
 
     noStroke()
     fill(217, 54, 54)
@@ -101,7 +107,38 @@ var tekenStartscherm = function () {
     ellipse(915,w+165,w,w);
 };
 
+var tekenEindscherm = function (){
+     background(248, 207, 255);
+    
+     fill(0, 0, 0);
+    textSize(85);
+    textFont('Courier New');
+    text("Sun Catcher", 370, 200);
 
+      fill(0, 0, 0);
+    textSize(50);
+    textFont('bold');
+    text("You reached the 100!!", 430, 600);
+
+    fill(255, 245, 105);
+    rect(430, 440, 500, 100);
+
+    fill(0,0,0);
+    textSize(28);
+    textFont('Helvetica');
+    text("Klik op ENTER om opnieuw te startten", 430, 500);
+       fill("white")
+
+        fill("white")
+    rect(600,w+200,w+50,w-50);
+    ellipse(600,w+225,w-50,w-50);
+    ellipse(750,w+210,w-20,w-20);
+    ellipse(640,w+190,w-30,w-30);
+    ellipse(690,w+190,w,w);
+
+      
+
+};
 
 /**
  * Tekent het speelveld
@@ -262,10 +299,16 @@ var beweegVijand = function() {
     }
 
     if (score > 10){
-    vijandY = vijandY + 3;
+    vijandY = vijandY + 1;
     }
-    if(score > 15){
-        vijandY = VijandY +1;
+    if(score > 25){
+        vijandY = vijandY +1;
+    }
+    if(score > 50){
+        vijandY = vijandY +1;
+    }
+    if(score > 75){
+        vijandY = vijandY +1;
     }
 };
 
@@ -327,6 +370,8 @@ var checkVijandGevangen = function() {
  * @returns {boolean} true als het spel is afgelopen
  */
 var checkGameOver = function() {
+    if (score >= maxScore)
+    return true;
     
   return false;
 };
@@ -359,6 +404,7 @@ function draw() {
       tekenStartscherm();
       if (keyIsDown(32)) {// 32=spatie
           spelStatus = SPELEN;
+          score= 0;
       }
       break;
     
@@ -389,6 +435,10 @@ function draw() {
       break;
 
     case  GAMEOVER:
+        tekenEindscherm()
+        if (keyIsDown(13)) {//enter
+            spelStatus = STARTSCHERM;
+}
       // deze functie hebben jullie nog niet gemaakt  
       // gameOverScherm();
     break;
